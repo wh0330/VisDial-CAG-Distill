@@ -5,6 +5,7 @@ Context-Aware Graph Inference with Knowledge Distillation for Visual Dialog
 ![alt text](https://github.com/wh0330/CAG_VisDial/blob/master/image/framework.png)
 <p align="center">The overall framework of Context-Aware Graph.</p>
 
+
 ![alt text](https://github.com/wh0330/VisDial_CAG_Distill/blob/main/image/visdial_distill.png)
 <p align="center">Knowledge distillation between CAG and Img-Only models.</p>
 
