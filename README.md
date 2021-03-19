@@ -6,26 +6,16 @@ Context-Aware Graph Inference with Knowledge Distillation for Visual Dialog
 <p align="center">The overall framework of Context-Aware Graph.</p>
 
 
-![alt text](https://github.com/wh0330/VisDial_CAG_Distill/blob/main/image/visdial_distill.png)
+![alt text ](https://github.com/wh0330/VisDial_CAG_Distill/blob/main/image/visdial_distill.png)
 <p align="center">Knowledge distillation between CAG and Img-Only models.</p>
 
 
 
-This is a PyTorch implementation for [Iterative Context-Aware Graph Inference for Visual Dialog, CVPR2020](https://arxiv.org/abs/2004.02194).
+This is a PyTorch implementation for Context-Aware Graph Inference with Knowledge Distillation for Visual Dialog.
 
 
 If you use this code in your research, please consider citing:
 
-```text
-@InProceedings{Guo_2020_CVPR,
-author = {Guo, Dan and Wang, Hui and Zhang, Hanwang and Zha, Zheng-Jun and Wang, Meng},
-title = {Iterative Context-Aware Graph Inference for Visual Dialog},
-booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2020}
-}
-
-```
 
 Requirements
 ----------------------
@@ -41,18 +31,24 @@ Data
 4. Download pre-trained GloVe word vectors from [here][4].
 
 
-Training
+Pre-train
 --------
 
 Train the CAG model as:
-
 ```sh
 python train/train.py --CUDA --encoder=CAGraph
 ```
-Train the Img-Only model as:
 
+Train the Img-Only model as:
 ```sh
 python train/train.py --CUDA --encoder=Img_only
+```
+Distillation
+--------
+
+Use the pre-trained Img-only model to generate soft-labels:
+```sh
+python train/soft_labels.py --CUDA --encoder=Img_only
 ```
 
 Evaluation
