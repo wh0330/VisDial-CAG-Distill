@@ -68,6 +68,7 @@ This will generate an EvalAI submission file, and you can submit the json file t
   Model  |  NDCG   |  MRR   |  R@1  | R@5  |  R@10   |  Mean  |
  ------- | ------ | ------ | ------ | ------ | ------ | ------ |
 CAG | 56.64 | 63.49 | 49.85 |  80.63| 90.15 | 4.11 |
+CAG-Distill | 57.77 | 64.62 | 51.28 |  80.58| 90.23 | 4.05 |
 
 Acknowledgements
 ----------------
