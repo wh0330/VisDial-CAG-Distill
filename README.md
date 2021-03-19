@@ -1,4 +1,4 @@
-Iterative Context-Aware Graph Inference for Visual Dialog
+Context-Aware Graph Inference with Knowledge Distillation for Visual Dialog
 ====================================
 
 
