@@ -47,9 +47,13 @@ Training
 Train the CAG model as:
 
 ```sh
-python train/train_D_1.0.py --CUDA
+python train/train.py --CUDA --encoder=CAGraph
 ```
+Train the Img-Only model as:
 
+```sh
+python train/train.py --CUDA --encoder=Img_only
+```
 
 Evaluation
 ----------
