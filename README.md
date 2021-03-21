@@ -36,21 +36,24 @@ Pre-train
 
 Train the CAG model as:
 ```sh
-python train/train.py --CUDA --encoder=CAGraph
+python train/train.py --cuda --encoder=CAGraph
 ```
 
 Train the Img-Only model as:
 ```sh
-python train/train.py --CUDA --encoder=Img_only
+python train/train.py --cuda --encoder=Img_only
 ```
 Distillation
 --------
 
-Use the pre-trained Img-only model to generate soft-labels:
+First, use the pre-trained Img-only model to generate soft-labels:
 ```sh
-python train/soft_labels.py --CUDA --encoder=Img_only
+python train/soft_labels.py --model_path [path_to_root]/save/pretrained_img_only.pth --cuda
 ```
-
+Fine-tuning the pre-trained CAG model as:
+```sh
+python train/train_distill.py --model_path [path_to_root]/save/pretrained_cag.pth  --softlabel ./soft_labels.h5 --cuda
+```
 Evaluation
 ----------
 
