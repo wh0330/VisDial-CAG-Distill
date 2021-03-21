@@ -29,7 +29,7 @@ Data
 2. Download the word counts file for VisDial v1.0 train split from [here][2]. 
 3. Use Faster-RCNN to extract image features from [here][3].
 4. Download pre-trained GloVe word vectors from [here][4].
-5. We have released a specific subset of Visdial v1.0 (val-yn) (mentioned in our paper) in the folder [subdataset](./released_datasets): 
+5. We collected a specific subset from Visdial v1.0 val, called Visdial v1.0 (val-yn) (mentioned in our paper) in the folder [subdataset](https://github.com/wh0330/VisDial-CAG-Distill/tree/main/subdataset).
 
 
 Pre-train
