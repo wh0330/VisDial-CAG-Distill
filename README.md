@@ -29,6 +29,7 @@ Data
 2. Download the word counts file for VisDial v1.0 train split from [here][2]. 
 3. Use Faster-RCNN to extract image features from [here][3].
 4. Download pre-trained GloVe word vectors from [here][4].
+5. We have released a specific subset of Visdial v1.0 (val-yn) (mentioned in our paper) in the folder [subdataset](./released_datasets): 
 
 
 Pre-train
@@ -50,7 +51,7 @@ First, use the pre-trained Img-only model to generate soft-labels:
 ```sh
 python train/soft_labels.py --model_path [path_to_root]/save/pretrained_img_only.pth --cuda
 ```
-Fine-tuning the pre-trained CAG model as:
+Then, fine-tune the pre-trained CAG model as:
 ```sh
 python train/train_distill.py --model_path [path_to_root]/save/pretrained_cag.pth  --softlabel ./soft_labels.h5 --cuda
 ```
